@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="container-a">
+    <button mat-raised-button color="primary" (click)="roll()">Try it</button>
+    <div class="dice-container">
+      <app-dice [face]="face1"></app-dice>
+      <app-dice [face]="face2"></app-dice>
+    </div>
+  </div>
+  <div class="container-b">
+    <div *ngIf="leak > 0">
+      <span>Leaked info: <span>{{leak}}</span></span><br>
+      <span>Possible outcomes:</span>
+      <div class="outcomes-container">
+        <div class="outcome-container" *ngFor="let faces of outcomes[leak-2]; index as i;">
+          <app-dice [face]="faces[0]"></app-dice>
+          <app-dice [face]="faces[1]"></app-dice>
+        </div>
+      </div>
+      <span>Probability: {{(outcomes[leak-2].length)}}/36</span>
+    </div>
+  </div>
+</div>

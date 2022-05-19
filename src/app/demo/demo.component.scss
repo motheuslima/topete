@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-a, .container-b {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.dice-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.outcome-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px red solid;
+  border-radius: 5px;
+  margin: 0.5em;
+}
+
+.outcomes-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+span {
+  padding: .5em;
+}
