@@ -9,6 +9,8 @@ export class DiceComponent implements OnChanges {
 
   @Input() face;
 
+  @Input() type = 1;
+
   @ViewChild('dice') diceEl: ElementRef;
 
   constructor() {}

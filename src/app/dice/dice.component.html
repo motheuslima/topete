@@ -1,35 +1,35 @@
 <div #dice class="dice dice-one">
-  <div id="dice-one-side-one" class='side one'>
-    <div class="dot one-1"></div>
+  <div id="dice-one-side-one" class='side one' [ngClass]="type == 1 ? 'side--red' : 'side--white'">
+    <div class="dot one-1" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
   </div>
-  <div id="dice-one-side-two" class='side two'>
-    <div class="dot two-1"></div>
-    <div class="dot two-2"></div>
+  <div id="dice-one-side-two" class='side two' [ngClass]="type == 1 ? 'side--red' : 'side--white'">
+    <div class="dot two-1" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot two-2" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
   </div>
-  <div id="dice-one-side-three" class='side three'>
-    <div class="dot three-1"></div>
-    <div class="dot three-2"></div>
-    <div class="dot three-3"></div>
+  <div id="dice-one-side-three" class='side three' [ngClass]="type == 1 ? 'side--red' : 'side--white'">
+    <div class="dot three-1" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot three-2" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot three-3" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
   </div>
-  <div id="dice-one-side-four" class='side four'>
-    <div class="dot four-1"></div>
-    <div class="dot four-2"></div>
-    <div class="dot four-3"></div>
-    <div class="dot four-4"></div>
+  <div id="dice-one-side-four" class='side four' [ngClass]="type == 1 ? 'side--red' : 'side--white'">
+    <div class="dot four-1" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot four-2" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot four-3" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot four-4" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
   </div>
-  <div id="dice-one-side-five" class='side five'>
-    <div class="dot five-1"></div>
-    <div class="dot five-2"></div>
-    <div class="dot five-3"></div>
-    <div class="dot five-4"></div>
-    <div class="dot five-5"></div>
+  <div id="dice-one-side-five" class='side five' [ngClass]="type == 1 ? 'side--red' : 'side--white'">
+    <div class="dot five-1" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot five-2" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot five-3" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot five-4" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot five-5" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
   </div>
-  <div id="dice-one-side-six" class='side six'>
-    <div class="dot six-1"></div>
-    <div class="dot six-2"></div>
-    <div class="dot six-3"></div>
-    <div class="dot six-4"></div>
-    <div class="dot six-5"></div>
-    <div class="dot six-6"></div>
+  <div id="dice-one-side-six" class='side six' [ngClass]="type == 1 ? 'side--red' : 'side--white'">
+    <div class="dot six-1" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot six-2" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot six-3" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot six-4" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot six-5" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
+    <div class="dot six-6" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
   </div>
 </div>
