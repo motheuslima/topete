@@ -26,7 +26,16 @@ export class DemoComponent implements OnInit {
     [[6,6]]
   ]
 
-  constructor() { }
+  outcomes2 = [
+  ]
+
+  constructor() {
+    for (let i = 1; i <= 6; i++) {
+      for (let j = 1; j <= 6; j++) {
+        this.outcomes2.push([i,j]);
+      }
+    }
+  }
 
   ngOnInit(): void {
   }
@@ -37,6 +46,12 @@ export class DemoComponent implements OnInit {
 
     this.leak = this.face1 + this.face2;
     console.log(this.face1);
+  }
+
+  isValid(faces: Array<number>) {
+    if (faces[0] + faces[1] == this.leak)
+      return true;
+    else return false;
   }
 
 }

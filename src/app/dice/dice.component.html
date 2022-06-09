@@ -1,4 +1,4 @@
-<div #dice class="dice dice-one">
+<div #dice class="dice dice-one" [ngClass]="small ? 'dice--small' : ''">
   <div id="dice-one-side-one" class='side one' [ngClass]="type == 1 ? 'side--red' : 'side--white'">
     <div class="dot one-1" [ngClass]="type == 1 ? 'dot--red' : 'dot--white'"></div>
   </div>

@@ -20,11 +20,18 @@
   border: 1px black solid;
   border-radius: 5px;
   margin: 0.5em;
+
+  &-valid {
+    background-color: lightgreen;
+  }
 }
 
 .outcomes-container {
-  display: grid;
-  grid-template-columns: auto auto;
+  grid-auto-flow: column;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 span {

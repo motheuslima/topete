@@ -23,9 +23,9 @@
       <span>Leaked info:  C(r,w) =<span>{{leak}}</span></span><br>
       <span>Possible outcomes:</span>
       <div class="outcomes-container">
-        <div class="outcome-container" *ngFor="let faces of outcomes[leak-2]; index as i;">
-          <app-dice [face]="faces[0]"></app-dice>
-          <app-dice [face]="faces[1]" [type]="2"></app-dice>
+        <div class="outcome-container" *ngFor="let faces of outcomes2; index as i;" [class.outcome-container-valid]=isValid(faces)>
+          <app-dice [face]="faces[0]" [small]=true></app-dice>
+          <app-dice [face]="faces[1]" [type]="2" [small]=true></app-dice>
         </div>
       </div>
     </div>

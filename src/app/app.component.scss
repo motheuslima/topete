@@ -4,5 +4,19 @@
 
 .outlet {
   padding: 1em;
+  display: flex;
+}
+
+.arrow {
+  padding: 5px;
+  display: flex;
+  height: calc(100vh - 114px);
+  align-items: center;
+  margin: 5px;
+  cursor: pointer;
+
+  :hover {
+    color: #4caf50;
+  }
 }
 
