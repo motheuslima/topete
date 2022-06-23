@@ -9,14 +9,29 @@ import { DemoComponent } from './demo/demo.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { DiceComponent } from './dice/dice.component';
+import {MatSelectModule} from '@angular/material/select';
 
+import { DiceComponent } from './dice/dice.component';
+import { IntroComponent } from './intro/intro.component';
+import { SectionOneComponent } from './section-one/section-one.component';
+import { SectionTwoComponent } from './section-two/section-two.component';
+
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+export function httpTranslateLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
-    DiceComponent
+    DiceComponent,
+    IntroComponent,
+    SectionOneComponent,
+    SectionTwoComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +39,16 @@ import { DiceComponent } from './dice/dice.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

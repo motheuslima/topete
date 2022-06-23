@@ -1,15 +1,23 @@
 <p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>Topete</span>
+  <mat-toolbar class="toolbar" color="primary">
+    <a href="https://topete.science/">
+      <img class="image" src="/assets/images/logo.png" alt="image">
+    </a>
     <span class="example-spacer"></span>
+    <mat-select [(value)]="language" (selectionChange)="translateLanguageTo($event.value)">
+      <mat-option value="en">EN</mat-option>
+      <mat-option value="pt">PT</mat-option>
+    </mat-select>
   </mat-toolbar>
 </p>
 
 <div class="outlet">
-  <div class="arrow"><mat-icon aria-hidden="false">arrow_back</mat-icon></div>
-  <app-demo></app-demo>
-  <div class="arrow"><mat-icon aria-hidden="false">arrow_forward</mat-icon></div>
+  <div class="arrow" (click)="left()"><mat-icon aria-hidden="false">arrow_back</mat-icon></div>
+  <div class="content">
+    <app-intro *ngIf="page == 1"></app-intro>
+    <app-section-one *ngIf="page == 2"></app-section-one>
+    <app-section-two *ngIf="page == 3"></app-section-two>
+    <app-demo *ngIf="page == 4"></app-demo>
+  </div>
+  <div class="arrow" (click)="right()"><mat-icon aria-hidden="false">arrow_forward</mat-icon></div>
 </div>

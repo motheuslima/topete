@@ -1,0 +1,7 @@
+<div class="content">
+  <h1>Deterministic Channels</h1>
+  <span>Now we turn our attention to the information leakage caused by a system C that processes a secret X. 2 In the first part of this book, we consider systems that take a secret X as input and whose only publicly observable behavior is to produce an output Y ; such systems are known as channels. In this section we restrict our attention to deterministic channels, where each input value x leads to a unique output value y, which we describe as C(x)=y.</span>
+  <span>Returning to our dice example, we suppose that C takes as input the value (r,w) of X and outputs the sum of the two dice, so that C(r,w) = r+w. (From a security perspective, we can think of C as a malicious program that leaks the sum of the digits of a PIN.)Returning to our dice example, we suppose that C takes as input the value (r,w) of X and outputs the sum of the two dice, so that C(r,w) = r+w. (From a security perspective, we can think of C as a malicious program that leaks the sum of the digits of a PIN.)</span>
+  <span>Here the space Y of possible output values is {{'{2,3,4,...,12}'}}', and the effect is to partition the space X into blocks consisting of the pairs of dice that sum to each of those values:</span>
+  <img class="image" src="/assets/images/2.png" alt="image">
+</div>
