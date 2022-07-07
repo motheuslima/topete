@@ -19,6 +19,7 @@ import { SectionTwoComponent } from './section-two/section-two.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SectionThreeComponent } from './section-three/section-three.component';
 
 export function httpTranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -31,7 +32,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     DiceComponent,
     IntroComponent,
     SectionOneComponent,
-    SectionTwoComponent
+    SectionTwoComponent,
+    SectionThreeComponent
   ],
   imports: [
     BrowserModule,

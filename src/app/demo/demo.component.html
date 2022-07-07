@@ -1,4 +1,18 @@
-<h1>Demo</h1>
+<h1>Posterior distributions and hyper-distributions</h1>
+<span>To understand the effect of the partition more precisely, we must also pay attention
+  to probabilities. First, note that each block in the partition gives rise to a posterior
+  distribution on X: the set of possible values of X is restricted to the elements of the
+  block, and the relative likelihood of those values is the same as in the prior distribution.
+  In our dice example we are assuming a uniform prior distribution ϑ, which means that
+  each of the 11 posterior distributions is also uniform. Second, note that each posterior
+  distribution itself has a probability of occurring, which comes from the probability
+  of the output value from which that posterior was deduced. That is in effect the
+  probability that the adversary will find herself in that world. The result is that channel
+  C maps the prior distribution ϑ to a distribution on posterior distributions, which we
+  call a hyper-distribution and denote by [ϑ▷C].</span>
+<br/><br/>
+<h2>Demo</h2>
+<span>In this demo you can see the probability of discovering a secret, as in our example, knowing only one information about it. In this case, knowing the sum of the secret values, we have a definite number of possible outcomes. </span>
 <div class="container">
   <div class="container-a">
     <button mat-raised-button color="primary" (click)="roll()">Try it</button>
